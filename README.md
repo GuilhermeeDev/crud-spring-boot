@@ -1,13 +1,6 @@
-# 📦 CRUD Spring Boot
+# 📦 CRUD com Spring Boot
 
-Aplicação **CRUD simples** desenvolvida com **Java + Spring Boot** para gerenciamento de produtos.
-
-O projeto permite realizar as operações básicas de:
-
-- Criar produtos  
-- Listar produtos  
-- Atualizar produtos  
-- Deletar produtos  
+Aplicação **CRUD** desenvolvida com **Java + Spring Boot** para gerenciamento de produtos.
 
 ---
 
@@ -17,7 +10,7 @@ O projeto permite realizar as operações básicas de:
 - Spring Boot  
 - Spring Web  
 - Spring Data JPA  
-- PostgreSQL (Docker)  
+- PostgreSQL
 - Maven 4+
 
 ---
@@ -27,18 +20,21 @@ O projeto permite realizar as operações básicas de:
 #### 1. Clone este repositório
 
 ```bash
-git clone https://github.com/GuilhermeeDev/CRUD-Spring-Boot.git
-cd CRUD-Spring-Boot
+git clone https://github.com/GuilhermeeDev/crud-spring-boot.git
+cd crud-spring-boot
 ```
-#### 2. Rode a aplicação
+#### 2. Rode como localhost
 ```
 mvnw spring-boot:run
 ```
 
-#### 3. Rode com Docker
+#### 3. Rode com Docker / Docker compose
+Build do container
 ```
-docker build -t crud-springboot .
+docker build -t crud-springboot:latest .
 ```
+
+Subindo compose pré-configurado
 ```
-docker run -d -p 8080:8080 --name crud-springboot crud-springboot
-``
+docker compose up
+```
