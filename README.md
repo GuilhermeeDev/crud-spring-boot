@@ -33,6 +33,10 @@ cd crud-spring-boot
 mvn clean package -DskipTests
 ```
 
+```
+java -jar target/demo-0.0.1-SNAPSHOT.jar
+```
+
 #### 3. Rode com Docker / Docker compose
 Build do container
 ```

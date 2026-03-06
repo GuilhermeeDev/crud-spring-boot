@@ -1,12 +1,12 @@
-package Crud.simples.demo.controllers;
+package com.crud_spring_boot.demo.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import Crud.simples.demo.repository.ProductRepository;
+import com.crud_spring_boot.demo.repository.ProductRepository;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import Crud.simples.demo.entity.Product;
+import com.crud_spring_boot.demo.entity.Product;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

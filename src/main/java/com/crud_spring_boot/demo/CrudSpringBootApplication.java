@@ -1,12 +1,13 @@
-package Crud.simples.demo;
+package com.crud_spring_boot.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CrudSimplesApplication {
+public class CrudSpringBootApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CrudSimplesApplication.class, args);
+		SpringApplication.run(CrudSpringBootApplication.class, args);
 	}
+
 }

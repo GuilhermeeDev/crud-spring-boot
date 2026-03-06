@@ -1,4 +1,4 @@
-package Crud.simples.demo.entity;
+package com.crud_spring_boot.demo.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
