@@ -3,3 +3,4 @@ target/
 docker-compose.yml
 mvnw.cmd
 README.md
+corrector.sh

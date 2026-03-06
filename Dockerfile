@@ -1,10 +1,22 @@
-FROM maven:3.9-eclipse-temurin-21 AS build
+# ---------- BUILD ----------
+FROM maven:3-eclipse-temurin-21-alpine AS build
 
 WORKDIR /app
-COPY . .
+
+# Copia primeiro o pom para aproveitar cache do docker
+COPY pom.xml .
+
+# Baixa dependencias
+RUN mvn -B -q -e -C dependency:go-offline
+
+# Copia codigo fonte
+COPY src ./src
+
+# Build da aplicação
 RUN mvn clean package -DskipTests
 
-FROM eclipse-temurin:21-ubi10-minimal
+# ---------- EXECUÇÃO ----------
+FROM eclipse-temurin:21-jre-ubi10-minimal
 
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
