@@ -11,7 +11,7 @@ Aplicação **CRUD** desenvolvida com **Java + Spring Boot** para gerenciamento 
 - Spring Web  
 - Spring Data JPA  
 - PostgreSQL
-- Maven 4+
+- Maven 3.5+
 
 ---
 
@@ -28,7 +28,9 @@ Aplicação **CRUD** desenvolvida com **Java + Spring Boot** para gerenciamento 
 git clone https://github.com/GuilhermeeDev/crud-spring-boot.git
 cd crud-spring-boot
 ```
+
 #### 2. Rode como localhost
+
 ```
 mvn clean package -DskipTests
 ```
@@ -40,7 +42,7 @@ java -jar target/demo-0.0.1-SNAPSHOT.jar
 #### 3. Rode com Docker / Docker compose
 Build do container
 ```
-docker build -t crud-springboot:latest .
+docker build -t crud-springboot:0.0.1 .
 ```
 
 Subindo docker compose pré-configurado
