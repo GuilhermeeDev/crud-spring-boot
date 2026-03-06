@@ -1,17 +1,36 @@
 services:
   crud-springboot:
-    image: crud-springboot:latest
+    image: crud-springboot:0.0.1
+
     ports:
       - "8080:8080"
+    
     depends_on:
       - postgres
+
+    environment:
+        SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/CrudDatabase
+        SPRING_DATASOURCE_USERNAME: postgres
+        SPRING_DATASOURCE_PASSWORD: postgres
+    
+    mem_limit: 1GB
+    cpus: '2.0'
+    restart: unless-stopped
     
   postgres:
-    container_name: postgres
-    image: postgres:16
+    image: postgres:16-alpine
+    
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+
     environment:
       POSTGRES_DB: CrudDatabase
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-    ports:
-      - "5432:5432"
+
+    mem_limit: 1GB
+    cpus: '2.0'
+    restart: unless-stopped
